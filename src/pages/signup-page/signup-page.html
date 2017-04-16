@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>SIGN UP</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <form #signUp="ngForm" novalidate>
+      <p class="form-title">Create your account!</p>
+      <ion-item-divider text-wrap>Use your company address to create your account and begin your journey to simply all your needs</ion-item-divider>
+      <ion-item>
+        <ion-label text-center>First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="firstName" name="firstName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-center>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="lastName" name="lastName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-center>Email ID</ion-label>
+        <ion-input type="email" [(ngModel)]="emailId" name="emailId" required email="true"></ion-input>
+      </ion-item>
+      <p ion-text clear full color="danger" *ngIf="signUp.form.touched && !(userPass===confirmPass)">Passwords don't match!!</p>
+      <ion-item>
+        <ion-label text-center>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="userPass" name="userPass" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-center>Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPass" name="confirmPass" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-center>Contact Number</ion-label>
+        <ion-input type="tel" [(ngModel)]="contactNumber" name="contactNumber" required></ion-input>
+      </ion-item>
+      <button ion-button color="secondary" full (click)="registerUser()" [disabled]="!signUp.valid  || !(userPass===confirmPass)">SIGN UP</button>
+    </form>
+  </ion-list>
+</ion-content>

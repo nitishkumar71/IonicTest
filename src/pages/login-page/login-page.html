@@ -1,0 +1,19 @@
+<ion-content padding>
+  <ion-list no-lines>
+      <div class="logo">
+        <ion-img></ion-img>
+        <p>Powered by inhabitr</p>
+      </div>
+      <p ion-text clear full color="danger" *ngIf="loginFailed">Login Failed!!</p>
+      <ion-item-divider text-center>SIGN IN</ion-item-divider>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="userName" placeholder="USERNAME"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="userPass" placeholder="PASSWORD"></ion-input>
+      </ion-item>
+      <button ion-button color="secondary" full (click)="loginUser()">SIGN IN</button>
+      <br/>
+      <button ion-button clear full (click)="naviagateSignUp()" color="light">SIGN UP</button>
+  </ion-list>
+</ion-content>

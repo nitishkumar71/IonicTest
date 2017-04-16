@@ -1,0 +1,20 @@
+{
+  "name": "IonicTest",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/login.php",
+      "proxyUrl": "http://52.21.74.42/api/login.php"
+    },
+    {
+      "path": "/profile.php",
+      "proxyUrl": "http://52.21.74.42/api/profile.php"
+    },
+    {
+      "path": "/register.php",
+      "proxyUrl": "http://52.21.74.42/api/register.php"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+page-signup-page {
+
+    ion-content{
+        ion-list{
+            .form-title{
+                font-weight: bold;
+            }
+            .item-divider{
+                background: transparent;
+                color: #000000;
+                font-weight: bold;
+                font-size:0.6em;
+                border-bottom: 1px solid #000000;
+                margin-bottom: 20px;
+            }
+            .item-block{
+                border: 1px solid rgba(0,0,0,0.1);
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
